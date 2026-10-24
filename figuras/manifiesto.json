@@ -1,0 +1,1112 @@
+[
+  {
+    "figura": "01_registro_codigo.png",
+    "titulo": "Registro: vínculo del formulario con MD5",
+    "fragmentos": [
+      {
+        "src": "02_codigo_registro.png",
+        "box": [
+          35,
+          192,
+          1020,
+          271
+        ],
+        "label": "A. Biblioteca cargada y función de registro",
+        "marks": [
+          [
+            390,
+            194,
+            901,
+            219
+          ],
+          [
+            40,
+            244,
+            495,
+            270
+          ]
+        ],
+        "maxscale": 1.4,
+        "sha256_original": "d94eb276de1a91d90ef5f1cbddfb3bc808c06909c55944b8bb6e3b644fbdab98"
+      },
+      {
+        "src": "02_codigo_registro.png",
+        "box": [
+          110,
+          706,
+          910,
+          758
+        ],
+        "label": "B. Cálculo de los dos campos MD5",
+        "marks": [
+          [
+            115,
+            710,
+            897,
+            755
+          ]
+        ],
+        "maxscale": 1.4,
+        "sha256_original": "d94eb276de1a91d90ef5f1cbddfb3bc808c06909c55944b8bb6e3b644fbdab98"
+      },
+      {
+        "src": "02b_onsubmit_registro.png",
+        "box": [
+          725,
+          825,
+          1340,
+          858
+        ],
+        "label": "C. El envío invoca verify_passwords",
+        "marks": [
+          [
+            730,
+            829,
+            1330,
+            853
+          ]
+        ],
+        "maxscale": 1.4,
+        "sha256_original": "31126480f446428ddbf346970c94e09dc58477202fa0e4b7916becff55c59647"
+      }
+    ]
+  },
+  {
+    "figura": "02_registro_peticion.png",
+    "titulo": "Registro: petición real capturada en Burp",
+    "fragmentos": [
+      {
+        "src": "03_registro_interceptado.png",
+        "box": [
+          338,
+          180,
+          1100,
+          226
+        ],
+        "label": "A. Destino y método de la petición",
+        "marks": [
+          [
+            344,
+            205,
+            1068,
+            224
+          ]
+        ],
+        "maxscale": 1.4,
+        "sha256_original": "81b6e5ac66c79b2757170a879a2589eff6a9d255afa39a6987884e7f77b4f951"
+      },
+      {
+        "src": "03_registro_interceptado.png",
+        "box": [
+          488,
+          606,
+          860,
+          625
+        ],
+        "label": "B. Campo password_md5",
+        "marks": [
+          [
+            491,
+            608,
+            853,
+            624
+          ]
+        ],
+        "maxscale": 1.4,
+        "sha256_original": "81b6e5ac66c79b2757170a879a2589eff6a9d255afa39a6987884e7f77b4f951"
+      },
+      {
+        "src": "03_registro_interceptado.png",
+        "box": [
+          858,
+          606,
+          1295,
+          625
+        ],
+        "label": "C. Campo passwordconfirm_md5",
+        "marks": [
+          [
+            864,
+            608,
+            1286,
+            624
+          ]
+        ],
+        "maxscale": 1.4,
+        "sha256_original": "81b6e5ac66c79b2757170a879a2589eff6a9d255afa39a6987884e7f77b4f951"
+      },
+      {
+        "src": "03_registro_interceptado.png",
+        "box": [
+          24,
+          626,
+          359,
+          644
+        ],
+        "label": "D. Usuario y contraseñas en texto plano vacías",
+        "marks": [
+          [
+            140,
+            626,
+            355,
+            642
+          ]
+        ],
+        "maxscale": 1.4,
+        "sha256_original": "81b6e5ac66c79b2757170a879a2589eff6a9d255afa39a6987884e7f77b4f951"
+      }
+    ]
+  },
+  {
+    "figura": "03_login_codigo.png",
+    "titulo": "Login: formulario e implementación cargados",
+    "fragmentos": [
+      {
+        "src": "05_codigo_login.png",
+        "box": [
+          19,
+          713,
+          815,
+          742
+        ],
+        "label": "A. Consulta del formulario real del DOM",
+        "marks": [],
+        "maxscale": 1.4,
+        "sha256_original": "4a51e08803c02c94a50f92864176ede01edc0a7cdeb7705483cb3e2968c4d039"
+      },
+      {
+        "src": "05_codigo_login.png",
+        "box": [
+          34,
+          746,
+          1190,
+          769
+        ],
+        "label": "B. POST y onsubmit del login",
+        "marks": [
+          [
+            438,
+            749,
+            1182,
+            766
+          ]
+        ],
+        "maxscale": 1.4,
+        "sha256_original": "4a51e08803c02c94a50f92864176ede01edc0a7cdeb7705483cb3e2968c4d039"
+      },
+      {
+        "src": "05_codigo_login.png",
+        "box": [
+          19,
+          775,
+          295,
+          800
+        ],
+        "label": "C. Consulta de la función en ejecución",
+        "marks": [],
+        "maxscale": 1.4,
+        "sha256_original": "4a51e08803c02c94a50f92864176ede01edc0a7cdeb7705483cb3e2968c4d039"
+      },
+      {
+        "src": "05_codigo_login.png",
+        "box": [
+          923,
+          802,
+          1624,
+          825
+        ],
+        "label": "D. Fragmento de md5hash: los dos cálculos",
+        "marks": [
+          [
+            928,
+            804,
+            1265,
+            823
+          ],
+          [
+            1315,
+            804,
+            1570,
+            823
+          ]
+        ],
+        "maxscale": 1.4,
+        "sha256_original": "4a51e08803c02c94a50f92864176ede01edc0a7cdeb7705483cb3e2968c4d039"
+      },
+      {
+        "src": "05_codigo_login.png",
+        "box": [
+          1619,
+          802,
+          1838,
+          825
+        ],
+        "label": "E. Otro fragmento: vaciado del campo original",
+        "marks": [
+          [
+            1645,
+            804,
+            1826,
+            823
+          ]
+        ],
+        "maxscale": 1.4,
+        "sha256_original": "4a51e08803c02c94a50f92864176ede01edc0a7cdeb7705483cb3e2968c4d039"
+      },
+      {
+        "src": "05_codigo_login.png",
+        "box": [
+          18,
+          847,
+          680,
+          898
+        ],
+        "label": "F. hex_md5 utiliza core_md5",
+        "marks": [
+          [
+            34,
+            875,
+            665,
+            896
+          ]
+        ],
+        "maxscale": 1.4,
+        "sha256_original": "4a51e08803c02c94a50f92864176ede01edc0a7cdeb7705483cb3e2968c4d039"
+      }
+    ]
+  },
+  {
+    "figura": "04_consola.png",
+    "titulo": "Consola del navegador: dos hashes calculados",
+    "fragmentos": [
+      {
+        "src": "06_consola_hash.png",
+        "box": [
+          16,
+          715,
+          850,
+          935
+        ],
+        "label": "A. Fragmento ejecutado del script propio",
+        "marks": [
+          [
+            47,
+            747,
+            343,
+            768
+          ]
+        ],
+        "maxscale": 1.4,
+        "sha256_original": "30c38751c23fa3b73517554d5169f67c1b874b37fa28b2598c9500612340c290"
+      },
+      {
+        "src": "06_consola_hash.png",
+        "box": [
+          36,
+          945,
+          865,
+          1019
+        ],
+        "label": "B. Resultado expandido: mismo hash en ambos campos",
+        "marks": [
+          [
+            72,
+            965,
+            835,
+            1010
+          ]
+        ],
+        "maxscale": 1.4,
+        "sha256_original": "30c38751c23fa3b73517554d5169f67c1b874b37fa28b2598c9500612340c290"
+      }
+    ]
+  },
+  {
+    "figura": "05_login_correcto_peticion.png",
+    "titulo": "Login correcto: campos enviados",
+    "fragmentos": [
+      {
+        "src": "07_login_correcto_burp.png",
+        "box": [
+          342,
+          179,
+          930,
+          226
+        ],
+        "label": "A. Interceptación del POST de login",
+        "marks": [
+          [
+            346,
+            205,
+            801,
+            224
+          ]
+        ],
+        "maxscale": 1.4,
+        "sha256_original": "c92b2f0cdfa5860ce2a4388243f7baec5e9f7f971e81004892cbdee3736c1348"
+      },
+      {
+        "src": "07_login_correcto_burp.png",
+        "box": [
+          24,
+          865,
+          446,
+          888
+        ],
+        "label": "B. Cuenta propia y contraseña en texto plano vacía",
+        "marks": [
+          [
+            25,
+            869,
+            437,
+            886
+          ]
+        ],
+        "maxscale": 1.4,
+        "sha256_original": "c92b2f0cdfa5860ce2a4388243f7baec5e9f7f971e81004892cbdee3736c1348"
+      },
+      {
+        "src": "07_login_correcto_burp.png",
+        "box": [
+          625,
+          865,
+          1118,
+          888
+        ],
+        "label": "C. vb_login_md5password",
+        "marks": [
+          [
+            628,
+            869,
+            1114,
+            886
+          ]
+        ],
+        "maxscale": 1.4,
+        "sha256_original": "c92b2f0cdfa5860ce2a4388243f7baec5e9f7f971e81004892cbdee3736c1348"
+      },
+      {
+        "src": "07_login_correcto_burp.png",
+        "box": [
+          1115,
+          865,
+          1330,
+          888
+        ],
+        "label": "D. Nombre del segundo campo (continúa en la línea siguiente)",
+        "marks": [],
+        "maxscale": 1.4,
+        "sha256_original": "c92b2f0cdfa5860ce2a4388243f7baec5e9f7f971e81004892cbdee3736c1348"
+      },
+      {
+        "src": "07_login_correcto_burp.png",
+        "box": [
+          24,
+          886,
+          291,
+          907
+        ],
+        "label": "E. Valor de vb_login_md5password_utf",
+        "marks": [
+          [
+            27,
+            888,
+            285,
+            904
+          ]
+        ],
+        "maxscale": 1.4,
+        "sha256_original": "c92b2f0cdfa5860ce2a4388243f7baec5e9f7f971e81004892cbdee3736c1348"
+      }
+    ]
+  },
+  {
+    "figura": "06_login_correcto_panel.png",
+    "titulo": "Control positivo: acceso al panel privado",
+    "fragmentos": [
+      {
+        "src": "08b_panel_usuario.png",
+        "box": [
+          146,
+          51,
+          729,
+          97
+        ],
+        "label": "A. URL del panel de usuario",
+        "marks": [],
+        "maxscale": 1.4,
+        "sha256_original": "98b691e7da10d89796083a96e0a3b1a634f6e41c61ea572261ac8ed16fe61378"
+      },
+      {
+        "src": "08b_panel_usuario.png",
+        "box": [
+          395,
+          372,
+          1508,
+          438
+        ],
+        "label": "B. Panel privado e identidad autenticada",
+        "marks": [
+          [
+            1269,
+            380,
+            1477,
+            400
+          ]
+        ],
+        "maxscale": 1.4,
+        "sha256_original": "98b691e7da10d89796083a96e0a3b1a634f6e41c61ea572261ac8ed16fe61378"
+      },
+      {
+        "src": "08b_panel_usuario.png",
+        "box": [
+          395,
+          654,
+          1508,
+          761
+        ],
+        "label": "C. Contenido del panel de la cuenta",
+        "marks": [],
+        "maxscale": 1.4,
+        "sha256_original": "98b691e7da10d89796083a96e0a3b1a634f6e41c61ea572261ac8ed16fe61378"
+      }
+    ]
+  },
+  {
+    "figura": "07_login_incorrecto_peticion.png",
+    "titulo": "Control negativo: hashes de la clave incorrecta",
+    "fragmentos": [
+      {
+        "src": "09_login_incorrecto_burp.png",
+        "box": [
+          342,
+          179,
+          930,
+          226
+        ],
+        "label": "A. Interceptación del POST de login",
+        "marks": [
+          [
+            346,
+            205,
+            801,
+            224
+          ]
+        ],
+        "maxscale": 1.4,
+        "sha256_original": "65fc06c79ec8b1cf2ef15fae8918945d1ac259a0ce8fac33a19fa78530ffd66b"
+      },
+      {
+        "src": "09_login_incorrecto_burp.png",
+        "box": [
+          24,
+          865,
+          446,
+          888
+        ],
+        "label": "B. Cuenta propia y contraseña en texto plano vacía",
+        "marks": [
+          [
+            25,
+            869,
+            437,
+            886
+          ]
+        ],
+        "maxscale": 1.4,
+        "sha256_original": "65fc06c79ec8b1cf2ef15fae8918945d1ac259a0ce8fac33a19fa78530ffd66b"
+      },
+      {
+        "src": "09_login_incorrecto_burp.png",
+        "box": [
+          625,
+          865,
+          1118,
+          888
+        ],
+        "label": "C. vb_login_md5password",
+        "marks": [
+          [
+            628,
+            869,
+            1114,
+            886
+          ]
+        ],
+        "maxscale": 1.4,
+        "sha256_original": "65fc06c79ec8b1cf2ef15fae8918945d1ac259a0ce8fac33a19fa78530ffd66b"
+      },
+      {
+        "src": "09_login_incorrecto_burp.png",
+        "box": [
+          1115,
+          865,
+          1330,
+          888
+        ],
+        "label": "D. Nombre del segundo campo (continúa en la línea siguiente)",
+        "marks": [],
+        "maxscale": 1.4,
+        "sha256_original": "65fc06c79ec8b1cf2ef15fae8918945d1ac259a0ce8fac33a19fa78530ffd66b"
+      },
+      {
+        "src": "09_login_incorrecto_burp.png",
+        "box": [
+          24,
+          886,
+          291,
+          907
+        ],
+        "label": "E. Valor de vb_login_md5password_utf",
+        "marks": [
+          [
+            27,
+            888,
+            285,
+            904
+          ]
+        ],
+        "maxscale": 1.4,
+        "sha256_original": "65fc06c79ec8b1cf2ef15fae8918945d1ac259a0ce8fac33a19fa78530ffd66b"
+      }
+    ]
+  },
+  {
+    "figura": "08_login_incorrecto_resultado.png",
+    "titulo": "Control negativo: rechazo de las credenciales",
+    "fragmentos": [
+      {
+        "src": "09b_rechazo_login.png",
+        "box": [
+          147,
+          51,
+          818,
+          97
+        ],
+        "label": "A. URL que procesó el acceso",
+        "marks": [],
+        "maxscale": 1.4,
+        "sha256_original": "14398a8ac9f34f6273c36446e600253d0ad6c8ca04c833b0034806d021678e60"
+      },
+      {
+        "src": "09b_rechazo_login.png",
+        "box": [
+          549,
+          449,
+          1353,
+          671
+        ],
+        "label": "B. Rechazo real y aviso del límite de intentos",
+        "marks": [
+          [
+            580,
+            518,
+            1328,
+            579
+          ],
+          [
+            580,
+            595,
+            1318,
+            636
+          ]
+        ],
+        "maxscale": 1.4,
+        "sha256_original": "14398a8ac9f34f6273c36446e600253d0ad6c8ca04c833b0034806d021678e60"
+      }
+    ]
+  },
+  {
+    "figura": "09_sustitucion_antes.png",
+    "titulo": "Nueva solicitud: contraseña incorrecta, antes de editar",
+    "fragmentos": [
+      {
+        "src": "10a_sustitucion_antes.png",
+        "box": [
+          342,
+          179,
+          930,
+          226
+        ],
+        "label": "A. Interceptación del POST de login",
+        "marks": [
+          [
+            346,
+            205,
+            801,
+            224
+          ]
+        ],
+        "maxscale": 1.4,
+        "sha256_original": "5158229a85352af19c47867b63f3bb400219e1cf0d0fb5833d969d273904a3fe"
+      },
+      {
+        "src": "10a_sustitucion_antes.png",
+        "box": [
+          24,
+          865,
+          446,
+          888
+        ],
+        "label": "B. Cuenta propia y contraseña en texto plano vacía",
+        "marks": [
+          [
+            25,
+            869,
+            437,
+            886
+          ]
+        ],
+        "maxscale": 1.4,
+        "sha256_original": "5158229a85352af19c47867b63f3bb400219e1cf0d0fb5833d969d273904a3fe"
+      },
+      {
+        "src": "10a_sustitucion_antes.png",
+        "box": [
+          625,
+          865,
+          1118,
+          888
+        ],
+        "label": "C. vb_login_md5password",
+        "marks": [
+          [
+            628,
+            869,
+            1114,
+            886
+          ]
+        ],
+        "maxscale": 1.4,
+        "sha256_original": "5158229a85352af19c47867b63f3bb400219e1cf0d0fb5833d969d273904a3fe"
+      },
+      {
+        "src": "10a_sustitucion_antes.png",
+        "box": [
+          1115,
+          865,
+          1330,
+          888
+        ],
+        "label": "D. Nombre del segundo campo (continúa en la línea siguiente)",
+        "marks": [],
+        "maxscale": 1.4,
+        "sha256_original": "5158229a85352af19c47867b63f3bb400219e1cf0d0fb5833d969d273904a3fe"
+      },
+      {
+        "src": "10a_sustitucion_antes.png",
+        "box": [
+          24,
+          886,
+          291,
+          907
+        ],
+        "label": "E. Valor de vb_login_md5password_utf",
+        "marks": [
+          [
+            27,
+            888,
+            285,
+            904
+          ]
+        ],
+        "maxscale": 1.4,
+        "sha256_original": "5158229a85352af19c47867b63f3bb400219e1cf0d0fb5833d969d273904a3fe"
+      }
+    ]
+  },
+  {
+    "figura": "10_sustitucion_despues.png",
+    "titulo": "Misma solicitud: ambos hashes sustituidos",
+    "fragmentos": [
+      {
+        "src": "10b_sustitucion_despues.png",
+        "box": [
+          342,
+          179,
+          930,
+          226
+        ],
+        "label": "A. Interceptación del POST de login",
+        "marks": [
+          [
+            346,
+            205,
+            801,
+            224
+          ]
+        ],
+        "maxscale": 1.4,
+        "sha256_original": "b5158bd42ee7ab62a1c31dd2729eb8945afe92ba790d71013ddcba16342a1e8b"
+      },
+      {
+        "src": "10b_sustitucion_despues.png",
+        "box": [
+          24,
+          865,
+          446,
+          888
+        ],
+        "label": "B. Cuenta propia y contraseña en texto plano vacía",
+        "marks": [
+          [
+            25,
+            869,
+            437,
+            886
+          ]
+        ],
+        "maxscale": 1.4,
+        "sha256_original": "b5158bd42ee7ab62a1c31dd2729eb8945afe92ba790d71013ddcba16342a1e8b"
+      },
+      {
+        "src": "10b_sustitucion_despues.png",
+        "box": [
+          625,
+          865,
+          1118,
+          888
+        ],
+        "label": "C. vb_login_md5password",
+        "marks": [
+          [
+            628,
+            869,
+            1114,
+            886
+          ]
+        ],
+        "maxscale": 1.4,
+        "sha256_original": "b5158bd42ee7ab62a1c31dd2729eb8945afe92ba790d71013ddcba16342a1e8b"
+      },
+      {
+        "src": "10b_sustitucion_despues.png",
+        "box": [
+          1115,
+          865,
+          1330,
+          888
+        ],
+        "label": "D. Nombre del segundo campo (continúa en la línea siguiente)",
+        "marks": [],
+        "maxscale": 1.4,
+        "sha256_original": "b5158bd42ee7ab62a1c31dd2729eb8945afe92ba790d71013ddcba16342a1e8b"
+      },
+      {
+        "src": "10b_sustitucion_despues.png",
+        "box": [
+          24,
+          886,
+          291,
+          907
+        ],
+        "label": "E. Valor de vb_login_md5password_utf",
+        "marks": [
+          [
+            27,
+            888,
+            285,
+            904
+          ]
+        ],
+        "maxscale": 1.4,
+        "sha256_original": "b5158bd42ee7ab62a1c31dd2729eb8945afe92ba790d71013ddcba16342a1e8b"
+      }
+    ]
+  },
+  {
+    "figura": "11_sustitucion_respuesta.png",
+    "titulo": "Respuesta del servidor a la petición modificada",
+    "fragmentos": [
+      {
+        "src": "11c_burp_respuesta_sustitucion.png",
+        "box": [
+          0,
+          151,
+          1188,
+          276
+        ],
+        "label": "A. Historial: petición 750 marcada como editada",
+        "marks": [
+          [
+            0,
+            235,
+            1185,
+            256
+          ]
+        ],
+        "maxscale": 1.4,
+        "sha256_original": "20f8fefcc6401130c9e54b51651e016adb4386bf9aa13681c8fe596ed6e5c38e"
+      },
+      {
+        "src": "11c_burp_respuesta_sustitucion.png",
+        "box": [
+          780,
+          625,
+          1508,
+          831
+        ],
+        "label": "B. La respuesta identifica el acceso a MatiasLab2326",
+        "marks": [
+          [
+            814,
+            707,
+            1366,
+            733
+          ]
+        ],
+        "maxscale": 1.4,
+        "sha256_original": "20f8fefcc6401130c9e54b51651e016adb4386bf9aa13681c8fe596ed6e5c38e"
+      }
+    ]
+  },
+  {
+    "figura": "12_sustitucion_panel.png",
+    "titulo": "Comprobación posterior: panel privado accesible",
+    "fragmentos": [
+      {
+        "src": "11b_panel_tras_sustitucion.png",
+        "box": [
+          146,
+          51,
+          729,
+          97
+        ],
+        "label": "A. URL del panel después de la sustitución",
+        "marks": [],
+        "maxscale": 1.4,
+        "sha256_original": "0f9cc72525870f86c1a087db02fa1a9bd2f4cd3a024f71a7e8a5d88bfab02609"
+      },
+      {
+        "src": "11b_panel_tras_sustitucion.png",
+        "box": [
+          395,
+          372,
+          1508,
+          438
+        ],
+        "label": "B. Panel e identidad obtenidos después de reenviar",
+        "marks": [
+          [
+            1269,
+            380,
+            1477,
+            400
+          ]
+        ],
+        "maxscale": 1.4,
+        "sha256_original": "0f9cc72525870f86c1a087db02fa1a9bd2f4cd3a024f71a7e8a5d88bfab02609"
+      },
+      {
+        "src": "11b_panel_tras_sustitucion.png",
+        "box": [
+          395,
+          654,
+          1508,
+          761
+        ],
+        "label": "C. Contenido del panel privado",
+        "marks": [],
+        "maxscale": 1.4,
+        "sha256_original": "0f9cc72525870f86c1a087db02fa1a9bd2f4cd3a024f71a7e8a5d88bfab02609"
+      }
+    ]
+  },
+  {
+    "figura": "13_politica_registro.png",
+    "titulo": "Política publicada: registro y cookies",
+    "fragmentos": [
+      {
+        "src": "12c_privacidad_cookies.png",
+        "box": [
+          146,
+          51,
+          1335,
+          97
+        ],
+        "label": "A. URL de la política de privacidad",
+        "marks": [],
+        "maxscale": 1.4,
+        "sha256_original": "05bb8e870ea129a4e4a44c8c8300a3232f38f7bd6b4d8f34ea3be344a79d138e"
+      },
+      {
+        "src": "12c_privacidad_cookies.png",
+        "box": [
+          397,
+          194,
+          1502,
+          318
+        ],
+        "label": "B. Registration: datos exigidos y uso del correo",
+        "marks": [
+          [
+            400,
+            235,
+            1490,
+            312
+          ]
+        ],
+        "maxscale": 1.4,
+        "sha256_original": "05bb8e870ea129a4e4a44c8c8300a3232f38f7bd6b4d8f34ea3be344a79d138e"
+      },
+      {
+        "src": "12c_privacidad_cookies.png",
+        "box": [
+          397,
+          535,
+          1503,
+          615
+        ],
+        "label": "C. Use of Cookies: inicio de sesión",
+        "marks": [
+          [
+            400,
+            574,
+            1499,
+            613
+          ]
+        ],
+        "maxscale": 1.4,
+        "sha256_original": "05bb8e870ea129a4e4a44c8c8300a3232f38f7bd6b4d8f34ea3be344a79d138e"
+      }
+    ]
+  },
+  {
+    "figura": "14_politica_seguridad.png",
+    "titulo": "Política publicada: seguridad y fecha de actualización",
+    "fragmentos": [
+      {
+        "src": "12b_privacidad_seguridad.png",
+        "box": [
+          146,
+          51,
+          1335,
+          97
+        ],
+        "label": "A. URL de la política de privacidad",
+        "marks": [],
+        "maxscale": 1.4,
+        "sha256_original": "9848d943fcdb470fdb6484e38b95b317c5736092d43ca39ecacd681d391dc47d"
+      },
+      {
+        "src": "12b_privacidad_seguridad.png",
+        "box": [
+          397,
+          590,
+          1501,
+          701
+        ],
+        "label": "B. Security: protección general y cambio de credenciales",
+        "marks": [
+          [
+            400,
+            635,
+            1499,
+            698
+          ]
+        ],
+        "maxscale": 1.4,
+        "sha256_original": "9848d943fcdb470fdb6484e38b95b317c5736092d43ca39ecacd681d391dc47d"
+      },
+      {
+        "src": "12b_privacidad_seguridad.png",
+        "box": [
+          397,
+          842,
+          658,
+          872
+        ],
+        "label": "C. Fecha declarada de actualización",
+        "marks": [
+          [
+            400,
+            846,
+            652,
+            869
+          ]
+        ],
+        "maxscale": 1.4,
+        "sha256_original": "9848d943fcdb470fdb6484e38b95b317c5736092d43ca39ecacd681d391dc47d"
+      }
+    ]
+  },
+  {
+    "figura": "15_cambio_clave.png",
+    "titulo": "Cierre de la experiencia: cambio de contraseña",
+    "fragmentos": [
+      {
+        "src": "13_cambio_clave_redireccion.png",
+        "box": [
+          24,
+          490,
+          498,
+          530
+        ],
+        "label": "A. POST de actualización realizado por el usuario",
+        "marks": [
+          [
+            25,
+            494,
+            495,
+            513
+          ]
+        ],
+        "maxscale": 1.4,
+        "sha256_original": "c21cb14c72d03ceb4381a6ef66078396043c2e166ab0aa3d441bece0d7ef33e9"
+      },
+      {
+        "src": "13_cambio_clave_redireccion.png",
+        "box": [
+          737,
+          493,
+          1225,
+          515
+        ],
+        "label": "B. Respuesta HTTP 302",
+        "marks": [],
+        "maxscale": 1.4,
+        "sha256_original": "c21cb14c72d03ceb4381a6ef66078396043c2e166ab0aa3d441bece0d7ef33e9"
+      },
+      {
+        "src": "13_cambio_clave_redireccion.png",
+        "box": [
+          737,
+          651,
+          1245,
+          678
+        ],
+        "label": "C. Redirección al panel privado",
+        "marks": [
+          [
+            748,
+            655,
+            1224,
+            675
+          ]
+        ],
+        "maxscale": 1.4,
+        "sha256_original": "c21cb14c72d03ceb4381a6ef66078396043c2e166ab0aa3d441bece0d7ef33e9"
+      },
+      {
+        "src": "14_clave_anterior_rechazada.png",
+        "box": [
+          549,
+          449,
+          1353,
+          671
+        ],
+        "label": "D. Tras cerrar sesión, la contraseña anterior fue rechazada",
+        "marks": [
+          [
+            580,
+            518,
+            1328,
+            579
+          ]
+        ],
+        "maxscale": 1.4,
+        "sha256_original": "c3bce882c75b37e343b81ae0dbd62f986153bc37d2ae67220cf2cb5908ec1983"
+      }
+    ]
+  }
+]

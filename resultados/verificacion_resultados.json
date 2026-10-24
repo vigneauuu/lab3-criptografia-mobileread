@@ -1,0 +1,52 @@
+{
+  "login_correcto_request.txt": {
+    "usuario": "MatiasLab2326",
+    "hash": "02fa6c95e6f51a2e6cbb63fcf47adc5a",
+    "campos_md5_iguales": true,
+    "texto_plano_vacio": true,
+    "cookies_bbpassword_bbuserid_ausentes": true
+  },
+  "login_incorrecto_request.txt": {
+    "usuario": "MatiasLab2326",
+    "hash": "ae6b1f57beecb243ebf9df6179264ff3",
+    "campos_md5_iguales": true,
+    "texto_plano_vacio": true,
+    "cookies_bbpassword_bbuserid_ausentes": true
+  },
+  "pth_antes_request.txt": {
+    "usuario": "MatiasLab2326",
+    "hash": "ae6b1f57beecb243ebf9df6179264ff3",
+    "campos_md5_iguales": true,
+    "texto_plano_vacio": true,
+    "cookies_bbpassword_bbuserid_ausentes": true
+  },
+  "pth_modificada_request.txt": {
+    "usuario": "MatiasLab2326",
+    "hash": "02fa6c95e6f51a2e6cbb63fcf47adc5a",
+    "campos_md5_iguales": true,
+    "texto_plano_vacio": true,
+    "cookies_bbpassword_bbuserid_ausentes": true
+  },
+  "comparacion_sustitucion": {
+    "cabeceras_iguales": true,
+    "unicos_campos_modificados": [
+      "vb_login_md5password",
+      "vb_login_md5password_utf"
+    ]
+  },
+  "login_correcto_response.txt": {
+    "estado": "HTTP/1.1 200 OK",
+    "saludo_autenticacion": true,
+    "rechazo_credenciales": false
+  },
+  "login_incorrecto_response.txt": {
+    "estado": "HTTP/1.1 200 OK",
+    "saludo_autenticacion": false,
+    "rechazo_credenciales": true
+  },
+  "pth_response.txt": {
+    "estado": "HTTP/1.1 200 OK",
+    "saludo_autenticacion": true,
+    "rechazo_credenciales": false
+  }
+}
