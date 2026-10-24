@@ -8,7 +8,7 @@ Se identificó MD5 en registro y acceso, se reprodujeron los campos del login en
 
 - `scripts/hash_consola.js`: código ejecutado en la consola del navegador para calcular los dos campos mediante las funciones públicas del sitio. No envía solicitudes ni modifica el formulario.
 - `scripts/verificar_md5.mjs`: verificación local adicional de la biblioteca del sitio contra `node:crypto`, con cuatro casos de caracteres y espacios. No reemplaza la evidencia de DevTools.
-- `figuras/`: las quince figuras del informe, compuestas con recortes identificados de capturas propias y recuadros documentales.
+- `figuras/`: Las 17 figuras del informe: 15 composiciones de evidencias específicas y 2 capturas generales del entorno.
 - `figuras/manifiesto.json`: coordenadas de cada recorte y SHA-256 del archivo original del que procede.
 - `resultados/verificacion_resultados.json`: comparación de los campos de solicitudes y el contenido de las respuestas; sin cabeceras, cookies ni tokens.
 
