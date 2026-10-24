@@ -179,10 +179,23 @@
         "box": [
           34,
           746,
+          465,
+          769
+        ],
+        "label": "B1. Destino y método del formulario de login",
+        "marks": [],
+        "maxscale": 1.4,
+        "sha256_original": "4a51e08803c02c94a50f92864176ede01edc0a7cdeb7705483cb3e2968c4d039"
+      },
+      {
+        "src": "05_codigo_login.png",
+        "box": [
+          438,
+          746,
           1190,
           769
         ],
-        "label": "B. POST y onsubmit del login",
+        "label": "B2. Continuación de la misma línea: onsubmit del login",
         "marks": [
           [
             438,
