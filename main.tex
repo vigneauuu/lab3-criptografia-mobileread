@@ -9,6 +9,7 @@
 \usepackage{amsmath}
 \usepackage{fancyhdr}
 \usepackage{placeins}
+\usepackage{float}
 \usepackage{needspace}
 \usepackage{array,tabularx}
 \usepackage{enumitem}
@@ -58,25 +59,27 @@ La experiencia se realizó el 23 de octubre de 2026 sobre la cuenta propia \path
 
 El procedimiento consistió en revisar el código público, crear y activar la cuenta, calcular los hashes, capturar un acceso correcto y cerrar la sesión. Luego se envió una contraseña incorrecta como control negativo. Finalmente, en una nueva solicitud se sustituyeron únicamente los dos campos MD5 y se comprobó el resultado en la respuesta y en el panel privado. La sesión se cerró antes de comenzar las pruebas para no confundir el acceso automático del registro con una autenticación obtenida mediante el hash.
 
-\begin{table}[htbp]
+\begin{table}[H]
 \centering\small
-\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{2.1cm}>{\raggedright\arraybackslash}p{2.35cm}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}p{2.6cm}@{}}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{3cm}>{\raggedright\arraybackslash}p{2.4cm}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}p{3.15cm}@{}}
 \hline
 Prueba & Entrada & Modificación en Burp & Resultado\\ \hline
 
-Control positivo & \path|elmoyo123| & Ninguna & Acceso y panel privado\\[0.4em]
+Control positivo & \path|elmoyo123| & Ninguna & Acceso y panel privado\\[0.25em]
 
-Control negativo & \path|elmoyo124| & Ninguna & Credenciales rechazadas\\[0.4em]
+Control negativo & \path|elmoyo124| & Ninguna & Credenciales rechazadas\\[0.25em]
 
-Sustitución & \path|elmoyo124| & Los dos hashes correctos & Acceso y panel privado\\[0.4em]
+Sustitución & \path|elmoyo124| & Los dos hashes correctos & Acceso y panel privado\\[0.25em]
 
-Cierre & Clave antigua & Ninguna & Credenciales rechazadas\\[0.4em]
+Cierre & Clave antigua & Ninguna & Credenciales rechazadas\\[0.25em]
 
 \hline\end{tabularx}
 \caption{Controles y prueba de sustitución realizados con la cuenta propia.}
 \end{table}
 
 Las pruebas se limitaron al cliente y al comportamiento de esta cuenta. No se inspeccionaron la base de datos, el código del servidor ni cuentas de terceros. Las políticas publicadas y las observaciones experimentales se presentan por separado.
+
+
 
 \clearpage
 \section{Desarrollo de actividades según criterio de rúbrica}
@@ -86,7 +89,14 @@ Las pruebas se limitaron al cliente y al comportamiento de esta cuenta. No se in
 \subsection{Identifica el algoritmo hash utilizado para las contraseñas al momento del registro en el sitio web}
 \markboth{2.1\quad Algoritmo hash en el registro}{2.1\quad Algoritmo hash en el registro}
 
-Se abrió el formulario real de registro y se examinó su código fuente. El evento \path|onsubmit| llama a \path|verify_passwords(password, passwordconfirm)|. Esta función exige que ambas contraseñas estén presentes y coincidan; después invoca \path|md5hash| para completar \path|password_md5| y \path|passwordconfirm_md5|. La biblioteca cargada es \path|vbulletin_md5.js?v=385|, alojada en \url{https://www2.mobileread.com/c/} \cite{ref1,ref2}. La Figura~\ref{fig:1} conecta la biblioteca, las llamadas y el envío del formulario.
+Se abrió el formulario real de registro (Figura~\ref{fig:contexto-registro}) y se examinó su código fuente. El evento \path|onsubmit| llama a \path|verify_passwords(password, passwordconfirm)|. Esta función exige que ambas contraseñas estén presentes y coincidan; después invoca \path|md5hash| para completar \path|password_md5| y \path|passwordconfirm_md5|. La biblioteca cargada es \path|vbulletin_md5.js?v=385|, alojada en \url{https://www2.mobileread.com/c/} \cite{ref1,ref2}. La Figura~\ref{fig:1} conecta la biblioteca, las llamadas y el envío del formulario.
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=0.78\linewidth]{figuras/contexto_registro.jpg}
+ \caption{Vista general del formulario de registro de MobileRead utilizado al crear la cuenta de laboratorio.}
+ \label{fig:contexto-registro}
+\end{figure}
 
 \evidencia{01_registro_codigo.png}{Registro: biblioteca, generación de hashes y evento que la invoca.}{1}
 
@@ -124,7 +134,15 @@ El archivo completo del script se incluye en el repositorio del anexo. La contra
 \subsection{Intercepta el tráfico login con Burp Suite}
 \markboth{2.4\quad Interceptación del login con Burp Suite}{2.4\quad Interceptación del login con Burp Suite}
 
-Se cerró explícitamente la sesión inicial y el servidor mostró \texttt{All cookies cleared}. Luego se abrió el formulario de acceso, se mantuvo desmarcado \texttt{Remember Me} y se introdujeron el usuario propio y la contraseña correcta. Se activó la interceptación del proxy y se envió el formulario. En Burp se observó el POST a \path|/forums/login.php?do=login|, conservado antes de reenviarlo \cite{ref3}.
+Se cerró explícitamente la sesión inicial y el servidor mostró \texttt{All cookies cleared}. Luego se abrió el formulario de acceso, se mantuvo desmarcado \texttt{Remember Me} y se introdujeron el usuario propio y la contraseña correcta. Se activó la interceptación del proxy y se envió el formulario. En Burp se observó el POST a \path|/forums/login.php?do=login|, conservado antes de reenviarlo \cite{ref3}. La Figura~\ref{fig:contexto-burp} presenta el entorno de interceptación.
+
+\begin{figure}[htbp]
+ \centering
+ \includegraphics[width=0.93\linewidth]{figuras/contexto_burp.jpg}
+ \caption{Vista general de Burp Suite durante la interceptación del tráfico de inicio de sesión.}
+ \label{fig:contexto-burp}
+\end{figure}
+
 
 \evidencia{05_login_correcto_peticion.png}{Control positivo: solicitud real con usuario, contraseña vacía y los dos hashes correctos.}{5}
 
